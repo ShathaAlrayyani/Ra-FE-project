@@ -3,23 +3,23 @@ import { useRef, useEffect } from "react";
 
 export const VideoBg = () => {
   const videoRef = useRef<any>(null);
-  useEffect(() => {
-    const videoElement = videoRef.current;
+  // useEffect(() => {
+  //   const videoElement = videoRef.current;
 
-    const handleVideoEnded = () => {
-      // Restart the video when it finishes
-      videoElement.currentTime = 0;
-      videoElement.play();
-    };
+  //   const handleVideoEnded = () => {
+  //     // Restart the video when it finishes
+  //     videoElement.currentTime = 0;
+  //     videoElement.play();
+  //   };
 
-    // Add event listener for the 'ended' event
-    videoElement.addEventListener("ended", handleVideoEnded);
+  //   // Add event listener for the 'ended' event
+  //   videoElement.addEventListener("ended", handleVideoEnded);
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      videoElement.removeEventListener("ended", handleVideoEnded);
-    };
-  }, []);
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     videoElement.removeEventListener("ended", handleVideoEnded);
+  //   };
+  // }, []);
   return (
     <div className="videoWrapper">
       Hello
